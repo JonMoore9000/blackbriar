@@ -1,0 +1,120 @@
+== Common enemies ==
+Swampland common enemies only appear in Swampland and Kingmaker maps. They spawn only in certain islands and their stats increase each time a boss is defeated.
+{| class="wikitable"
+! Enemy
+! Level 1
+! Level 2
+! Level 3
+! Trait
+! Islands
+|-
+| [[File:Enemy snake.png]] Snake
+| [[File:Icon health.png]] 2 Health<br>[[File:Icon attack.png]] 1 Attack<br>[[File:Icon armor.png]] 0 Armor<br>[[File:Icon speed.png]] 2 speed
+| [[File:Icon health.png]] 3 Health<br>[[File:Icon attack.png]] 1 Attack<br>[[File:Icon armor.png]] 0 Armor<br>[[File:Icon speed.png]] 3 speed
+| [[File:Icon health.png]] 4 Health<br>[[File:Icon attack.png]] 1 Attack<br>[[File:Icon armor.png]] 0 Armor<br>[[File:Icon speed.png]] 4 speed
+| First Turn: Snake applies 2/3/4 poison on hit
+| Starting Island
+|-
+| [[File:Enemy frog.png]] Frog
+| [[File:Icon health.png]] 2 Health<br>[[File:Icon attack.png]] 1 Attack<br>[[File:Icon armor.png]] 2 Armor<br>[[File:Icon speed.png]] 0 speed
+| [[File:Icon health.png]] 2 Health<br>[[File:Icon attack.png]] 2 Attack<br>[[File:Icon armor.png]] 3 Armor<br>[[File:Icon speed.png]] 2 speed
+| [[File:Icon health.png]] 2 Health<br>[[File:Icon attack.png]] 3 Attack<br>[[File:Icon armor.png]] 4 Armor<br>[[File:Icon speed.png]] 3 speed
+| When exposed Frog gains 1/2/3 armor
+| Starting Island<br>Abandoned Quarry<br>Witch Marsh
+|-
+| [[File:Enemy beaver.png]] Beaver
+| [[File:Icon health.png]] 4 Health<br>[[File:Icon attack.png]] 1 Attack<br>[[File:Icon armor.png]] 0 Armor<br>[[File:Icon speed.png]] 1 speed
+| [[File:Icon health.png]] 6 Health<br>[[File:Icon attack.png]] 2 Attack<br>[[File:Icon armor.png]] 0 Armor<br>[[File:Icon speed.png]] 2 speed
+| [[File:Icon health.png]] 8 Health<br>[[File:Icon attack.png]] 3 Attack<br>[[File:Icon armor.png]] 0 Armor<br>[[File:Icon speed.png]] 3 speed
+| Battle Start: Beaver gains 3/4/5 regeneration
+| Abandoned Quarry<br>Glyph Ruins<br>Golem Home
+|-
+| [[File:Enemy dragonfly.png]] Dragonfly
+| [[File:Icon health.png]] 2 Health<br>[[File:Icon attack.png]] 0 Attack<br>[[File:Icon armor.png]] 0 Armor<br>[[File:Icon speed.png]] 3 speed
+| [[File:Icon health.png]] 3 Health<br>[[File:Icon attack.png]] 0 Attack<br>[[File:Icon armor.png]] 0 Armor<br>[[File:Icon speed.png]] 5 speed
+| [[File:Icon health.png]] 4 Health<br>[[File:Icon attack.png]] 0 Attack<br>[[File:Icon armor.png]] 0 Armor<br>[[File:Icon speed.png]] 7 speed
+| Battle Start: If Dragonfly has more speed it gains attack equal to the difference
+| Scorched Hill<br>Witch Marsh
+|-
+| [[File:Enemy palace guard.png]] Palace Guard
+| [[File:Icon health.png]] 2 Health<br>[[File:Icon attack.png]] 3 Attack<br>[[File:Icon armor.png]] 10 Armor<br>[[File:Icon speed.png]] 0 speed
+| [[File:Icon health.png]] 2 Health<br>[[File:Icon attack.png]] 6 Attack<br>[[File:Icon armor.png]] 15 Armor<br>[[File:Icon speed.png]] 0 speed
+| [[File:Icon health.png]] 2 Health<br>[[File:Icon attack.png]] 9 Attack<br>[[File:Icon armor.png]] 20 Armor<br>[[File:Icon speed.png]] 0 speed
+| 
+| Sunken Palace
+|-
+| [[File:Enemy slime.png]] Slime
+| [[File:Icon health.png]] 2 Health<br>[[File:Icon attack.png]] 2 Attack<br>[[File:Icon armor.png]] 2 Armor<br>[[File:Icon speed.png]] 0 speed
+| [[File:Icon health.png]] 2 Health<br>[[File:Icon attack.png]] 2 Attack<br>[[File:Icon armor.png]] 4 Armor<br>[[File:Icon speed.png]] 0 speed
+| [[File:Icon health.png]] 2 Health<br>[[File:Icon attack.png]] 2 Attack<br>[[File:Icon armor.png]] 6 Armor<br>[[File:Icon speed.png]] 0 speed
+| Battle Start: Give the player 4/6/8 acid
+| Golem Home<br>Scorched Hill
+|-
+| [[File:Enemy turtle.png]] Turtle
+| [[File:Icon health.png]] 1 Health<br>[[File:Icon attack.png]] 3 Attack<br>[[File:Icon armor.png]] 15 Armor<br>[[File:Icon speed.png]] 0 speed
+| [[File:Icon health.png]] 1 Health<br>[[File:Icon attack.png]] 6 Attack<br>[[File:Icon armor.png]] 15 Armor<br>[[File:Icon speed.png]] 0 speed
+| [[File:Icon health.png]] 1 Health<br>[[File:Icon attack.png]] 9 Attack<br>[[File:Icon armor.png]] 15 Armor<br>[[File:Icon speed.png]] 0 speed
+| Turtle loses all armor upon taking damage
+| Glyph Ruins
+|-
+| [[File:Enemy bee.png]] Honey Bee
+| [[File:Icon health.png]] 6 Health<br>[[File:Icon attack.png]] 2 Attack<br>[[File:Icon armor.png]] 15 Armor<br>[[File:Icon speed.png]] 2 speed
+| [[File:Icon health.png]] 10 Health<br>[[File:Icon attack.png]] 2 Attack<br>[[File:Icon armor.png]] 15 Armor<br>[[File:Icon speed.png]] 4 speed
+| [[File:Icon health.png]] 14 Health<br>[[File:Icon attack.png]] 2 Attack<br>[[File:Icon armor.png]] 15 Armor<br>[[File:Icon speed.png]] 6 speed
+| First Turn: Give the player 3/4/5 poison, 2/3/4 acid and 1/2/3 stun
+| Lushwood Grove
+|}
+
+== Bosses ==
+Swampland bosses appear at the end of the week in Swampland maps. The week's boss and its stats can be seen in advance by pressing Tab.
+{| class="wikitable"
+! Boss
+! width=1% | [[File:Icon health.png]] Health
+! width=1% | [[File:Icon attack.png]] Attack
+! width=1% | [[File:Icon armor.png]] Armor
+! width=1% | [[File:Icon speed.png]] Speed
+! Trait
+! width=1% | Week
+|-
+| [[File:Bosssprite slime.png]] Carnivorous Slime || 20 || 1 || 5 || 5 || Battle Start: Give 3 acid to the player and convert all player health except 1 to armor || 1
+|-
+| [[File:Bosssprite fungal.png]] Fungal Giant || 30 || 3 || 0 || 0 || Battle Start: Fungal Giant gains 1 poison for each status effect the player has || 1
+|-
+| [[File:Bosssprite gastropod.png]] Ironshell Snail || 5 || 3 || 50 || -1 || Battle Start: Ironshell Snail gains 5 acid || 1
+|-
+| [[File:Bosssprite druid.png]] Stormcloud Druid || 20 || 2 || 0 || 2 || Every Other Strike: Stun the player for 1 turn || 1
+|-
+| [[File:Bosssprite siren.png]] Swampsong Siren || 15 || 3 || 0 || 2 || Battle Start: Swampsong Siren gives the player -2 attack || 1
+|-
+| [[File:Bosssprite toad.png]] Toxic Miretoad || 20 || 2 || 0 || 3 || Battle Start: Toxic Miretoad steals all of the player's armor and gives them 3 poison || 1
+|-
+| [[File:Bosssprite spirit.png]] Clearspring Spirit || 30 || 3 || 0 || 2 || Battle Start: Gain 10 purity and on hit randomly decrease a status effect on itself or the player by 1|| 2
+|-
+| [[File:Bosssprite griffin.png]] Granite Griffin || 20 || 5 || 10 || 0 || Wounded: Granite Griffin gains 40 armor and gets stunned for 4 turns || 2
+|-
+| [[File:Bosssprite liferoot experiment.png]] Liferoot Experiment || 40 || 3 || 0 || 0 || Battle Start: Liferoot Experiment gains 10 regeneration || 2
+|-
+| [[File:Bosssprite shark.png]] Silverscale Shark || 15 || 0 || 10 || 3 || Turn Start: Give the player 2 riptide and gain 1 attack for each riptide the player has || 2
+|-
+| [[File:Bosssprite tortoise.png]] Rockshell Tortoise || 20 || 4 || 10 || 0 || Whenever Rockshell Tortoise is struck, it gains 4 armor || 2
+|}
+
+=== Swampland Hydra ===
+The final fight on Swampland maps is against 3 out of 4 Swampland Hydra heads, in a predefined order. Th player will not recover health or lose status effects between the fights. Before the fight the player will be shown all four heads and asked to remove one of them.
+{| class="wikitable"
+! Head
+! Fight
+! [[File:Icon health.png]] Health
+! [[File:Icon attack.png]] Attack
+! [[File:Icon armor.png]] Armor
+! [[File:Icon speed.png]] Speed
+! Trait
+|-
+| [[File:Hydraacid 160x160 outline.png|50px]] Acid Head || 1 || 10 || 3 || 30 || 4 || On Hit: Give the player 1 acid
+|-
+| [[File:Hydratide 160x160 outline.png|50px]] Riptide Head || 2 || 30 || 5 || 0 || -1 || On Hit: Give the player 1 riptide
+|-
+| [[File:Hydrapoison 160x160 outline.png|50px]] Poison Head || 3 || 50 || 2 || 0 || 2 || On Hit: Give the player 2 poison
+|-
+| [[File:Hydrastun 160x160 outline.png|50px]] Stun Head || 4 || 20 || 5 || 30 || 5 || Battle Start: Give the player 3 stun
+|}

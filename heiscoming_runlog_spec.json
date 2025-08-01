@@ -1,0 +1,87 @@
+{
+  "name": "He is Coming \u2013 Run Log + Death Journal",
+  "description": "A web app where players can submit and share summaries of their runs in the game 'He is Coming'. Includes AI-generated death roasts, community comments, and shareable pages.",
+  "tech_stack": {
+    "frontend": [
+      "Next.js",
+      "React",
+      "Tailwind CSS"
+    ],
+    "backend": [
+      "Supabase (or simple file-based JSON for MVP)"
+    ],
+    "ai": [
+      "OpenAI API (for humorous roasts)"
+    ]
+  },
+  "features": {
+    "run_submission": {
+      "description": "Players can submit a form including boss, items, stats, outcome, and notes.",
+      "fields": [
+        "boss",
+        "items",
+        "hp",
+        "atk",
+        "def",
+        "spd",
+        "outcome",
+        "death_reason",
+        "notes"
+      ]
+    },
+    "run_page": {
+      "description": "Each submitted run is viewable on a unique page.",
+      "elements": [
+        "boss card",
+        "item list",
+        "player stats",
+        "outcome badge",
+        "AI roast",
+        "comments section",
+        "share buttons"
+      ]
+    },
+    "run_feed": {
+      "description": "A global page that shows all submitted runs.",
+      "filters": [
+        "boss",
+        "outcome"
+      ],
+      "sort_options": [
+        "newest",
+        "funniest",
+        "deadliest"
+      ]
+    },
+    "comments": {
+      "description": "Players can leave comments on each run page.",
+      "fields": [
+        "optional name",
+        "message",
+        "timestamp"
+      ]
+    },
+    "ai_roast": {
+      "description": "OpenAI generates a short humorous summary/roast based on the run data.",
+      "prompt_example": "The player died to [Boss] with stats: HP: 6, ATK: 3, DEF: 0, SPD: 1 and used [Items]. Write a sarcastic one-liner about what went wrong."
+    },
+    "sharing": {
+      "description": "Players can share their run to Discord and Twitter.",
+      "features": [
+        "Twitter intent URL",
+        "Discord embed message",
+        "OpenGraph support"
+      ]
+    }
+  },
+  "auth": {
+    "required": false,
+    "reason": "MVP is designed to be frictionless. Player accounts can be added later for editing, voting, or profiles."
+  },
+  "optional_future_features": {
+    "user_accounts": "Allow players to save, edit, or delete runs and comments.",
+    "leaderboards": "Rank builds or players by death count, win streaks, etc.",
+    "run_tagging": "Tag runs with traits like 'glass cannon', 'tank', or 'speed run'.",
+    "voting": "Upvote funniest AI roast or most clever builds."
+  }
+}

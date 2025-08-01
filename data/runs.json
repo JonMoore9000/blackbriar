@@ -1,0 +1,153 @@
+[
+  {
+    "id": "sample-run-1",
+    "createdAt": "2025-08-01T18:00:00.000Z",
+    "playerName": "KnightSlayer",
+    "boss": "black-knight",
+    "items": [
+      "squires-blade",
+      "horned-helmet",
+      "redwood-cloak",
+      "healing-potion"
+    ],
+    "hp": 18,
+    "atk": 12,
+    "def": 8,
+    "spd": 4,
+    "outcome": "victory",
+    "notes": "Close fight! The Black Knight's adaptive attack was scary, but the horned helmet thorns helped chip him down.",
+    "commentCount": 3,
+    "shareCount": 2,
+    "aiRoast": "Congrats on beating a knight with slightly above-average stats. Even the Black Knight felt sorry for you."
+  },
+  {
+    "id": "sample-run-2",
+    "createdAt": "2025-08-01T17:30:00.000Z",
+    "playerName": "GlassCannonGamer",
+    "boss": "bloodmoon-werewolf",
+    "items": [
+      "moonlight-cleaver",
+      "cursed-ring"
+    ],
+    "hp": 8,
+    "atk": 15,
+    "def": 2,
+    "spd": 6,
+    "outcome": "defeat",
+    "deathReason": "Got shredded when I dropped below 50% health",
+    "notes": "High damage build looked good until the werewolf's bloodlust kicked in. That +5 attack hurt.",
+    "commentCount": 7,
+    "shareCount": 4,
+    "aiRoast": "Glass cannon? More like tissue paper cannon. The werewolf probably thought you were a chew toy."
+  },
+  {
+    "id": "sample-run-3",
+    "createdAt": "2025-08-01T17:00:00.000Z",
+    "playerName": "TankMaster",
+    "boss": "bearserker",
+    "items": [
+      "silverscale-dagger",
+      "champions-armor",
+      "iceblock-shield",
+      "ironstone-bracelet",
+      "healing-potion"
+    ],
+    "hp": 22,
+    "atk": 6,
+    "def": 14,
+    "spd": 2,
+    "outcome": "victory",
+    "notes": "Slow and steady wins the race. The Bearserker couldn't break through my armor stacking.",
+    "commentCount": 2,
+    "shareCount": 1,
+    "aiRoast": "Congratulations on discovering that armor exists. The bear died of boredom waiting for you to deal damage."
+  },
+  {
+    "id": "sample-run-4",
+    "createdAt": "2025-08-01T16:45:00.000Z",
+    "playerName": "SpeedDemon",
+    "boss": "granite-griffin",
+    "items": [
+      "fungal-rapier",
+      "leather-boots",
+      "wind-charm"
+    ],
+    "hp": 12,
+    "atk": 10,
+    "def": 4,
+    "spd": 12,
+    "outcome": "defeat",
+    "deathReason": "Couldn't outrun the griffin's dive attacks",
+    "notes": "Speed build looked promising until I realized the griffin doesn't care about my ground speed.",
+    "commentCount": 5,
+    "shareCount": 3,
+    "aiRoast": "Fast as lightning, fragile as glass. The griffin probably thought you were a very energetic snack."
+  },
+  {
+    "id": "sample-run-5",
+    "createdAt": "2025-08-01T16:15:00.000Z",
+    "playerName": "MagicUser",
+    "boss": "liferoot-experiment",
+    "items": [
+      "liferoot-staff",
+      "liferoot-gauntlet",
+      "mystic-robes",
+      "mana-crystal"
+    ],
+    "hp": 14,
+    "atk": 12,
+    "def": 6,
+    "spd": 7,
+    "outcome": "defeat",
+    "deathReason": "Ran out of mana during the regeneration phase",
+    "notes": "Magic vs magic fight was epic until my resources ran dry. That regeneration was brutal.",
+    "commentCount": 4,
+    "shareCount": 2,
+    "aiRoast": "Ah yes, the classic 'I forgot mana isn't infinite' mistake. The experiment is still laughing about your empty staff."
+  },
+  {
+    "id": "mdta0ejtlb4yazn4ih",
+    "createdAt": "2025-08-01T20:28:34.601Z",
+    "playerName": "Jon",
+    "boss": "blackbriar-king",
+    "items": [
+      "grilling-skewer",
+      "forge-hammer",
+      "silverscale-dagger",
+      "pacifist-staff",
+      "slime-sword"
+    ],
+    "hp": 10,
+    "atk": 3,
+    "def": 6,
+    "spd": 2,
+    "outcome": "defeat",
+    "deathReason": "the thorns keeping killing me",
+    "notes": "was a fun run but no match for the king lol",
+    "commentCount": 1,
+    "shareCount": 0,
+    "aiRoast": "Jon, with those stats, it's no wonder you got skewered by Blackbriar King's thorns. Maybe try a bouquet of roses next time."
+  },
+  {
+    "id": "mdta4sx6u0pq6u8mgy",
+    "createdAt": "2025-08-01T20:31:59.850Z",
+    "playerName": "JonTest",
+    "boss": "black-knight",
+    "items": [
+      "liferoot-staff",
+      "champions-blade",
+      "knights-blade",
+      "squires-blade",
+      "silverscale-dagger"
+    ],
+    "hp": 10,
+    "atk": 3,
+    "def": 4,
+    "spd": 3,
+    "outcome": "defeat",
+    "deathReason": "got whipped lol",
+    "commentCount": 0,
+    "shareCount": 0,
+    "aiRoast": "JonTest got whipped like a meringue by Black Knight with those flimsy stats and a weapon buffet."
+  }
+]

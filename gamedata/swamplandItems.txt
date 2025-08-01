@@ -1,0 +1,385 @@
+Swampland items can only be found in Swampland or Kingmaker games that use Swampland bundles. Swampland items come in 5 levels of rarity: Common, Rare, Heroic, Mythic, and Cursed. Items with Cursed rarity can only be obtained from a Crone.
+
+Swampland items may inflict the following status effects on either enemies or the player:
+* [[File:Icon acid.png]] Acid removes armor equal to acid at the start of the turn
+* [[File:Icon poison.png]] Poison takes damage equal to the amount of poison at turn start if no armor and and removes 1 poison stack at the start of the turn
+* [[File:Icon regen.png]] Regeneration restores health equal to the amount of regeneration at turn end and removes 1 regeneration at the end of the turn
+* [[File:Icon riptide.png]] Riptide takes 5 damage at the end of the turn and removes 1 riptide at the end of the turn
+* [[File:Icon stun.png]] Stun skips the attack and removes 1 stun at the end of the turn
+* [[File:Icon purity.png]] Purity gives 1 attack per stack and restores 3 health when removed
+
+== Weapons ==
+The player can only have one weapon. Choosing another weapon will destroy the existing one.
+{| class="wikitable"
+! Weapon
+! Rarity
+! Stats
+! Effect
+|-
+| Liferoot Staff || [[File:Rarity common.png]] Common || [[File:Icon attack.png]] 2 || Wounded: Gain 3 regeneration
+|-
+| Champion's Blade || [[File:Rarity common.png]] Common || [[File:Icon attack.png]] 6 || -
+|-
+| Fungal Rapier || [[File:Rarity common.png]] Common || [[File:Icon attack.png]] 3 || Battle Start: Gain 1 poison
+|-
+| Knight's Blade || [[File:Rarity common.png]] Common || [[File:Icon attack.png]] 4 || Upgrades after you defeat the next boss
+|-
+| Silverscale Dagger || [[File:Rarity common.png]] Common || [[File:Icon attack.png]] 2 || Battle Start: Give the enemy 1 riptide
+|-
+| Squire's Blade || [[File:Rarity common.png]] Common || [[File:Icon attack.png]] 2 || Upgrades after you defeat the next boss
+|-
+| Forge Hammer || [[File:Rarity common.png]] Common || [[File:Icon attack.png]] 4 || On Hit: Give the enemy 2 armor
+|-
+| Grilling Skewer || [[File:Rarity common.png]] Common || [[File:Icon attack.png]] 1 || Battle Start: Gain 1 additional strike
+|-
+| Ironstone Spear || [[File:Rarity common.png]] Common || [[File:Icon attack.png]] 2 || While you have armor, temporarily gain 2 attack
+|-
+| Marble Sword || [[File:Rarity common.png]] Common || [[File:Icon attack.png]] 1<br>[[File:Icon armor.png]] 2 || Exposed: Gain 3 attack
+|-
+| Stormcloud Spear || [[File:Rarity common.png]] Common || [[File:Icon attack.png]] 2 || Every 5 strikes, stun the enemy for 2 turns
+|-
+| Gale Staff || [[File:Rarity common.png]] Common || [[File:Icon attack.png]] 2<br>[[File:Icon speed.png]] 6 || On Hit: Lose 1 speed
+|-
+| Pacifist Staff || [[File:Rarity common.png]] Common || || On Hit: Gain 1 armor and restore 1 health
+|-
+| Slime Sword || [[File:Rarity common.png]] Common || [[File:Icon attack.png]] 2 || Battle Start: Give yourself and the enemy 3 acid
+|-
+| Basilisk Fang || [[File:Rarity rare.png]] Rare || [[File:Icon attack.png]] 3 || On Hit: Decrease your poison by 2 and give it to the enemy
+|-
+| Liferoot Hammer || [[File:Rarity rare.png]] Rare || [[File:Icon attack.png]] 3 || Regeneration that triggers overheal increases max health
+|-
+| Bubblegloop Staff || [[File:Rarity rare.png]] Rare || || Can't strike. Turn Start: Spend 1 speed to give the enemy 1 acid and 2 poison
+|-
+| Lightning Whip || [[File:Rarity rare.png]] Rare || [[File:Icon attack.png]] 3 || Turn Start: If the enemy is stunned, gain 1 additional strike
+|-
+| Rusty Sword || [[File:Rarity rare.png]] Rare || [[File:Icon attack.png]] 2 || On hit: If the enemy has no armor, deal additional damage equal to enemy acid
+|-
+| Wave Breaker || [[File:Rarity rare.png]] Rare || [[File:Icon attack.png]] -2 || Can't strike. Battle Start: Give the enemy 2 riptide for each negative base attack you have
+|-
+| Arcane Wand || [[File:Rarity rare.png]] Rare || || Can't attack. Turn Start: Deal 2 damage. Increase the damage by 1 for each tome equipped
+|-
+| Granite Axe || [[File:Rarity rare.png]] Rare || [[File:Icon attack.png]] 4 || On Hit: Lose 2 health and gain 4 armor
+|-
+| Lightning Rod || [[File:Rarity rare.png]] Rare || [[File:Icon attack.png]] 2 || Turn Start: If you're stunned, gain 1 attack
+|-
+| Sanguine Scepter || [[File:Rarity rare.png]] Rare || [[File:Icon attack.png]] 1 || Healing is doubled
+|-
+| Ring Blades || [[File:Rarity rare.png]] Rare || [[File:Icon attack.png]] 1 || Battle Start: Steal 1 attack from the enemy
+|-
+| Chainmail Sword || [[File:Rarity heroic.png]] Heroic || [[File:Icon attack.png]] 2<br>[[File:Icon armor.png]] 2 || Exposed: Gain armor equal to base armor
+|-
+| Serpent Dagger || [[File:Rarity heroic.png]] Heroic || [[File:Icon attack.png]] 2 || Every 3 strikes, give the enemy 4 poison
+|-
+| Silverscale Trident || [[File:Rarity heroic.png]] Heroic || || On Hit: Give the enemy 1 riptide
+|-
+| Melting Iceblade || [[File:Rarity heroic.png]] Heroic || [[File:Icon attack.png]] 7 || On Hit: Lose 1 attack
+|-
+| King's Blade || [[File:Rarity heroic.png]] Heroic || [[File:Icon attack.png]] 2 || Exposed and Wounded items triggers at battle start instead
+|-
+| Moonlight Cleaver || [[File:Rarity heroic.png]] Heroic || [[File:Icon attack.png]] 3 || While you are below 50% health, you cannot gain status effects
+|-
+| Leather Whip || [[File:Rarity heroic.png]] Heroic || [[File:Icon attack.png]] 4<br>[[File:Icon health.png]] 5 || Battle Start: Gain 5 max health
+|-
+| Bloodlord's Axe || [[File:Rarity heroic.png]] Heroic || [[File:Icon attack.png]] 4 || Battle Start: The enemy loses 5 health and you restore 5 health
+|-
+| Purelake Staff || [[File:Rarity heroic.png]] Heroic || [[File:Icon attack.png]] 1 || Battle Start: Gain 2 purity. On Hit: Remove 1 purity
+|-
+| Riverflow Rapier || [[File:Rarity heroic.png]] Heroic || [[File:Icon attack.png]] 3 || The first time you gain a new status effect, gain 1 additional strike as well
+|-
+| Thunderbound Sabre || [[File:Rarity heroic.png]] Heroic || [[File:Icon attack.png]] 6 || Battle start: Stun yourself for 2 turns
+|-
+| Ancient Warhammer || [[File:Rarity mythic.png]] Mythic || [[File:Icon attack.png]] 5 || On Hit: Remove all of the enemy's armor
+|-
+| Dashmaster's Dagger || [[File:Rarity mythic.png]] Mythic || [[File:Icon attack.png]] 2 || Battle Start: Gain additional strikes equal to speed
+|-
+| Lakebed Sword || [[File:Rarity mythic.png]] Mythic || [[File:Icon attack.png]] 5 || Gain double health and attack from purity
+|-
+| Cleaver of Wrath || [[File:Icon curse.png]] Cursed || [[File:Icon attack.png]] 10 || Your max health is always 1
+|-
+| Scepter of Greed || [[File:Icon curse.png]] Cursed || [[File:Icon attack.png]] 6 || You cannot gain gold
+|-
+| Sword of Pride || [[File:Icon curse.png]] Cursed || [[File:Icon attack.png]] 3<br>[[File:Icon armor.png]] 3<br>[[File:Icon speed.png]] 3 || Battle Start: If the enemy has more attack, armor or speed than you, take 3 damage
+|}
+
+== Items ==
+The player starts the game with 4 item slots. Defeating each boss increases the number of item slots by 2.
+{| class="wikitable sortable"
+! Item
+! Rarity
+! Stats
+! Effect
+|-
+| Liferoot Gauntlet || [[File:Rarity common.png]] Common || [[File:Icon health.png]] 3 || Battle start: Gain 1 regeneration
+|-
+| Champion's Armor || [[File:Rarity common.png]] Common || [[File:Icon armor.png]] 6 || -
+|-
+| Deviled Egg || [[File:Rarity common.png]] Common || || Hatches after you defeat the next boss
+|-
+| Knight's Armor || [[File:Rarity common.png]] Common || [[File:Icon armor.png]] 4 || Upgrades after you defeat the next boss
+|-
+| Serpent Lyre || [[File:Rarity common.png]] Common || || Exposed: Give the enemy 3 poison. Symphony
+|-
+| Silverscale Fish || [[File:Rarity common.png]] Common || || Exposed: Give the enemy 1 riptide
+|-
+| Squire's Armor || [[File:Rarity common.png]] Common || [[File:Icon armor.png]] 2 || Upgrades after you defeat the next boss
+|-
+| Treebark Egg || [[File:Rarity common.png]] Common || || Hatches after you defeat the next boss
+|-
+| Venomous Fang || [[File:Rarity common.png]] Common || || First Turn: Give the enemy 2 poison on hit
+|-
+| Holy Shield || [[File:Rarity common.png]] Common || [[File:Icon attack.png]] -1<br>[[File:Icon armor.png]] 6<br>[[File:Icon speed.png]] -1 || -
+|-
+| Weaver Shield || [[File:Rarity common.png]] Common || || Battle Start: If you have 0 base armor, gain 4 armor
+|-
+| Arcane Bell || [[File:Rarity common.png]] Common || || Battle Start: Decrease all countdowns by 1. Symphony
+|-
+| Granite Egg || [[File:Rarity common.png]] Common || || Hatches after you defeat the next boss
+|-
+| Leather Belt || [[File:Rarity common.png]] Common || [[File:Icon health.png]] 3 || If you have 0 base armor, double this items max health
+|-
+| Lightspeed Potion || [[File:Rarity common.png]] Common || [[File:Icon speed.png]] 1 || Battle Start: Restore health equal to speed
+|-
+| Rusty Ring || [[File:Rarity common.png]] Common || || Battle Start: Give the enemy 1 acid
+|-
+| Clearspring Feather || [[File:Rarity common.png]] Common || || Battle Start: Decrease a random status effect by 1 and give it to the enemy
+|-
+| Clearspring Watermelon || [[File:Rarity common.png]] Common || || Battle Start, Exposed & Wounded: Decrease a random status effect by 1
+|-
+| Petrifying Flask || [[File:Rarity common.png]] Common || || Wounded: Gain 10 armor and stun yourself for 2 turns
+|-
+| Slime Armor || [[File:Rarity common.png]] Common || [[File:Icon armor.png]] 5 || Battle Start: Gain 1 acid
+|-
+| Muscle Potion || [[File:Rarity common.png]] Common || || Every 3 strikes: Gain 1 attack
+|-
+| Purelake Helmet || [[File:Rarity common.png]] Common || [[File:Icon armor.png]] 2 || Battle Start: Gain 1 Purity
+|-
+| Royal Horn || [[File:Rarity common.png]] Common || || Wounded: Gain 2 gold. Symphony
+|-
+| Sour Lemon || [[File:Rarity common.png]] Common || [[File:Icon speed.png]] 3 || Battle Start: Gain 1 acid
+|-
+| Wet Egg || [[File:Rarity common.png]] Common || || Hatches after you defeat the next boss
+|-
+| Marble Mirror || [[File:Rarity rare.png]] Rare || [[File:Icon speed.png]] -2 || Battle Start: Gain armor equal to your opponent’s armor
+|-
+| Spiritual Balance || [[File:Rarity rare.png]] Rare || || Battle Start: If your speed is equal to your attack, gain 3 attack
+|-
+| Basilisk Scale || [[File:Rarity rare.png]] Rare || || Battle Start: Gain 5 armor and 5 poison
+|-
+| Crimson Fang || [[File:Rarity rare.png]] Rare || || Battle Start: If your health is full, lose 5 health and gain 2 additional strikes
+|-
+| Hero's Crossguard || [[File:Rarity rare.png]] Rare || || First Turn: Your On Hit effects trigger twice
+|-
+| Muscle Growth || [[File:Rarity rare.png]] Rare || || While you have regeneration, temporarily gain 3 attack
+|-
+| Silver Anchor || [[File:Rarity rare.png]] Rare || [[File:Icon speed.png]] -1 || Whenever you lose speed, give the enemy 1 riptide
+|-
+| Stillwater Pearl || [[File:Rarity rare.png]] Rare || || Riptide can trigger twice per turn
+|-
+| Toxic Algae || [[File:Rarity rare.png]] Rare || || The first time riptide triggers, give the enemy 5 poison
+|-
+| Toxic Rose || [[File:Rarity rare.png]] Rare || || Whenever you restore health, give the enemy 1 poison. You can only equip 1 rose
+|-
+| Soap Stone || [[File:Rarity rare.png]] Rare || || First turn: Spend 2 speed to temporarily gain 4 attack
+|-
+| Moonlight Crest || [[File:Rarity rare.png]] Rare || || Turn Start: If you're below 50% health, gain 1 regeneration
+|-
+| Mushroom Buckler || [[File:Rarity rare.png]] Rare || [[File:Icon armor.png]] 3 || If you have poison, enemy strikes deal 1 less damage
+|-
+| Nerve Poison || [[File:Rarity rare.png]] Rare || || The first time the enemy gains poison, stun them for 1 turn
+|-
+| Poisonous Mushroom || [[File:Rarity rare.png]] Rare || [[File:Icon attack.png]] 2 || Turn Start: Gain 1 poison
+|-
+| Silverscale Armor || [[File:Rarity rare.png]] Rare || || Whenever riptide triggers, gain 2 armor
+|-
+| Silverscale Greaves || [[File:Rarity rare.png]] Rare || || Battle Start: If you have more speed than the enemy, give them 2 riptide
+|-
+| Twisted Root || [[File:Rarity rare.png]] Rare || || Exposed: Gain 1 regeneration for each equipped wood item
+|-
+| Clearspring Cloak || [[File:Rarity rare.png]] Rare || || Exposed: Remove all your status effects and gain 1 armor equal to stacks removed
+|-
+| Arcane Gauntlet || [[File:Rarity rare.png]] Rare || || Battle Start: Halve all countdowns
+|-
+| Arcane Lens || [[File:Rarity rare.png]] Rare || || If you have exactly 1 tome equipped, it triggers thrice
+|-
+| Arcane Shield || [[File:Rarity rare.png]] Rare || || Whenever a countdown effect triggers, gain 3 armor
+|-
+| Corroded Bone || [[File:Rarity rare.png]] Rare || || Battle Start: Convert 50% of the enemy's health into armor
+|-
+| Chainmail Cloak || [[File:Rarity rare.png]] Rare || || Turn Start: If you have armor, restore 2 health
+|-
+| Clearspring Opal || [[File:Rarity rare.png]] Rare || [[File:Icon speed.png]] 2 || Turn Start: If you have any status effects, spend 1 speed to decrease a random status effect by 1
+|-
+| Clearspring Rose || [[File:Rarity rare.png]] Rare || || Whenever you restore health, decrease a random status effect by 1. You can only equip 1 rose
+|-
+| Forge Gauntlet || [[File:Rarity rare.png]] Rare || [[File:Icon attack.png]] 1 || Battle Start: Give the enemy 5 armor
+|-
+| Granite Fungi || [[File:Rarity rare.png]] Rare || || Turn End: Gain 2 armor and give the enemy 2 armor
+|-
+| Impressive Physique || [[File:Rarity rare.png]] Rare || [[File:Icon speed.png]] 2 || Exposed: Stun the enemy for 1 turn
+|-
+| Rusted Plate || [[File:Rarity rare.png]] Rare || || Whenever the enemy loses armor to acid, gain that armor
+|-
+| Stormcloud Armor || [[File:Rarity rare.png]] Rare || || Battle Start: If you have more speed than armor, stun the enemy for 2 turns
+|-
+| Stormcloud Curse || [[File:Rarity rare.png]] Rare || || Battle Start: Stun the enemy and yourself for 2 turns
+|-
+| Leather Waterskin || [[File:Rarity rare.png]] Rare || || Exposed: Gain 2 purity. Repeat this for each equipped water item
+|-
+| Plated Shield || [[File:Rarity rare.png]] Rare || [[File:Icon speed.png]] -1 || The first time you gain armor, double it
+|-
+| Riverflow Talisman || [[File:Rarity rare.png]] Rare || || Whenever you gain a status effect, gain 1 additional stack
+|-
+| Riverflow Violin || [[File:Rarity rare.png]] Rare || || Exposed: Gain 4 armor. Symphony
+|-
+| Spiral Shell || [[File:Rarity rare.png]] Rare || || Turn Start: If you're stunned, give the enemy 1 riptide
+|-
+| Marshlight Lantern || [[File:Rarity rare.png]] Rare || || Exposed: Lose 3 health and gain 8 armor
+|-
+| Purelake Armor || [[File:Rarity rare.png]] Rare || || Exposed: Remove 1 purity to gain 5 armor
+|-
+| Purelake Potion || [[File:Rarity rare.png]] Rare || || Battle start: Remove all your armor and gain 3 purity
+|-
+| Saltcrusted Crown || [[File:Rarity rare.png]] Rare || [[File:Icon health.png]] 8 || Battle Start: Gain 1 riptide
+|-
+| Sinful Mirror || [[File:Rarity rare.png]] Rare || || Wounded: Remove all your purity
+|-
+| Slime Bomb || [[File:Rarity rare.png]] Rare || || When the enemy becomes exposed, remove all their acid and deal 2 damage for each acid removed
+|-
+| Slime Booster || [[File:Rarity rare.png]] Rare || || Battle Start: Convert 1 acid into 2 attack
+|-
+| Slime Heart || [[File:Rarity rare.png]] Rare || || Wounded: Remove all your acid and restore 2 health for each acid removed
+|-
+| Slime Potion || [[File:Rarity rare.png]] Rare || || Wounded: Gain armor equal to lost health and gain 5 acid
+|-
+| Lightning Bottle || [[File:Rarity rare.png]] Rare || [[File:Icon attack.png]] 1<br>[[File:Icon speed.png]] 2 || Battle Start: Stun yourself for 1 turn
+|-
+| Vampiric Stasis || [[File:Rarity rare.png]] Rare || || Whenever you skip your strike, restore 3 health
+|-
+| Friendship Bracelet || [[File:Rarity rare.png]] Rare || [[File:Icon attack.png]] -1 || Battle Start: The enemy loses 1 attack
+|-
+| Thunder Cloud || [[File:Rarity heroic.png]] Heroic || [[File:Icon attack.png]] -1 || Wounded: Stun the enemy for 3 turns
+|-
+| Life Zap || [[File:Rarity heroic.png]] Heroic || || Battle Start: Lose all your health except 1 and stun the enemy for 2 turns
+|-
+| Explosive Arrow || [[File:Rarity heroic.png]] Heroic || || Turn Start: If the enemy doesn't have any armor, deal 2 damage
+|-
+| Liferoot Beast || [[File:Rarity heroic.png]] Heroic || || Turn Start: If you don't have any regeneration, gain 3 regeneration
+|-
+| Liferoot Lute || [[File:Rarity heroic.png]] Heroic || || Wounded: Gain 3 regeneration. Symphony
+|-
+| Noxious Gas || [[File:Rarity heroic.png]] Heroic || [[File:Icon armor.png]] 6 || Turn Start: Both you and the enemy gain 1 poison
+|-
+| Serpent Mask || [[File:Rarity heroic.png]] Heroic || || Battle Start: Give the enemy poison equal to your attack
+|-
+| Sanguine Imp || [[File:Rarity heroic.png]] Heroic || || Turn Start: Deal 1 damage and restore 1 health
+|-
+| Sanguine Morphosis || [[File:Rarity heroic.png]] Heroic || || Every 4th turn: Stun yourself for 1 turn and gain 3 regeneration
+|-
+| Silverscale Gauntlet || [[File:Rarity heroic.png]] Heroic || || Give the enemy 1 riptide every other turn
+|-
+| Mist Armor || [[File:Rarity heroic.png]] Heroic || [[File:Icon health.png]] 10<br>[[File:Icon speed.png]] 2 || Enemy strikes ignore armor
+|-
+| Petrified Statue || [[File:Rarity heroic.png]] Heroic || [[File:Icon speed.png]] -2 || Battle Start: Give the enemy 1 stun for each equipped stone item
+|-
+| Weaver Armor || [[File:Rarity heroic.png]] Heroic || [[File:Icon attack.png]] -2 || Battle Start: If you have 0 base armor, gain armor equal to current health
+|-
+| Acidic Witherleaf || [[File:Rarity heroic.png]] Heroic || [[File:Icon speed.png]] 1 || Battle Start: Give the enemy acid equal to your speed
+|-
+| Stoneborn Turtle || [[File:Rarity heroic.png]] Heroic || || Turn start: Restore 1 health. If your health is full, gain 2 armor instead
+|-
+| Stormcloud Drum || [[File:Rarity heroic.png]] Heroic || || Wounded: Stun the enemy for 1 turn. Symphony
+|-
+| Blood Rune || [[File:Rarity heroic.png]] Heroic || || Wounded: Re-trigger the last triggered wounded item
+|-
+| Echo Rune || [[File:Rarity heroic.png]] Heroic || || Wounded: Re-trigger a random battle start item
+|-
+| Iron Rune || [[File:Rarity heroic.png]] Heroic || || If you have exactly 1 item with exposed, it triggers thrice
+|-
+| Acid Mutation || [[File:Rarity heroic.png]] Heroic || || Battle Start: Gain 1 acid. While you have acid, temporarily gain attack equal to acid
+|-
+| Bloodstone Ring || [[File:Rarity heroic.png]] Heroic || || Battle Start: Gain 5 max health and restore 5 health
+|-
+| Clearspring Duck || [[File:Rarity heroic.png]] Heroic || || Turn Start: Gain 1 armor and decrease a random status effect by 1
+|-
+| Purelake Chalice || [[File:Rarity heroic.png]] Heroic || || Gain 1 purity every other turn
+|-
+| Sunlight Crest || [[File:Rarity heroic.png]] Heroic || || Turn Start: If you're above 50% health, lose 3 health and gain 1 attack
+|-
+| Prime Form || [[File:Rarity mythic.png]] Mythic || || Double attack while your health is full
+|-
+| Arcane Cloak || [[File:Rarity mythic.png]] Mythic || || Reset countdowns after they trigger
+|-
+| Grand Crescendo || [[File:Rarity mythic.png]] Mythic || || Symphony triggers all your other instruments
+|-
+| Primordial Soup || [[File:Rarity mythic.png]] Mythic || || Acid removes health as well
+|-
+| Serpent Scalemail || [[File:Rarity mythic.png]] Mythic || [[File:Icon armor.png]] 4 || Whenever you lose armor, give the enemy 2 poison
+|-
+| Stormtide Anchor || [[File:Rarity mythic.png]] Mythic || || Whenever riptide triggers, stun the enemy for 1 turn
+|-
+| Belt of Gluttony || [[File:Icon curse.png]] Cursed || [[File:Icon health.png]] 15 || Your health is hidden
+|-
+| Boots of Sloth || [[File:Icon curse.png]] Cursed || [[File:Icon speed.png]] 6 || You lose more time per step
+|-
+| Chest of Lust || [[File:Icon curse.png]] Cursed || [[File:Icon armor.png]] 8 || Monsters always hunt you
+|-
+| Helmet of Envy || [[File:Icon curse.png]] Cursed || [[File:Icon attack.png]] 3 || Battle Start: Double the enemy's attack
+|}
+
+=== Tomes ===
+Tome items can be obtained from Ancient Tomes.
+{| class="wikitable sortable"
+! Item
+! Rarity
+! Effect
+|-
+| Granite Tome || [[File:Rarity common.png]] Common || Countdown 4: Gain 6 armor
+|-
+| Holy Tome || [[File:Rarity common.png]] Common || Countdown 4: Gain 3 attack
+|-
+| Liferoot Tome || [[File:Rarity common.png]] Common || Countdown 4: Gain 3 regeneration
+|-
+| Silverscale Tome || [[File:Rarity common.png]] Common || Countdown 3: Give the enemy 2 riptide
+|-
+| Stormcloud Tome || [[File:Rarity common.png]] Common || Countdown 4: Stun the enemy for 1 turn
+|-
+| Sanguine Tome || [[File:Rarity rare.png]] Rare || Countdown 6: Restore health to full
+|-
+| Caustic Tome || [[File:Rarity rare.png]] Rare || Countdown 3: Give the enemy 3 acid. If they don't have any armor, give them 3 poison instead
+|-
+| Flameburst Tome || [[File:Rarity rare.png]] Rare || Countdown 4: Deal 4 damage and reset countdown
+|-
+| Purelake Tome || [[File:Rarity rare.png]] Rare || Countdown 3: If you have purity, remove 1 purity. Otherwise, gain 1 purity. Reset countdown
+|-
+| Cookbook || [[File:Rarity rare.png]] Rare || Replace this item with a random cauldron item after you defeat the next boss
+|-
+| Grand Tome || [[File:Rarity heroic.png]] Heroic || Countdown 10: Retrigger all your other tomes
+|-
+| Tome of the Hero || [[File:Rarity heroic.png]] Heroic || Countdown 8: Gain 4 attack, 4 armor and 4 speed
+|-
+| Sheet Music || [[File:Rarity heroic.png]] Heroic || Countdown 6: Trigger Symphony 3 times
+|}
+
+=== Elixirs ===
+Elixir items can be obtained from Potion Maker.
+{| class="wikitable sortable"
+! Item
+! Rarity
+! Effect
+|-
+| Lightspeed Elixir || [[File:Rarity common.png]] Common || Battle Start: Gain max health equal to your speed and then restore health equal to your speed
+|-
+| Muscle Elixir || [[File:Rarity common.png]] Common || Every 3 strikes: Gain 1 attack, 1 armor and 1 speed
+|-
+| Petrifying Elixir || [[File:Rarity common.png]] Common || Wounded: Gain 10 armor and stun yourself and the enemy for 2 turns
+|-
+| Lightning Elixir || [[File:Rarity rare.png]] Rare || Battle Start: Stun yourself for 2 turns
+|-
+| Nerve Elixir || [[File:Rarity rare.png]] Rare || The first time the enemy gains poison, stun them for 3 turns
+|-
+| Purelake Elixir || [[File:Rarity rare.png]] Rare || Battle start: Lose 5 armor and gain 5 purity
+|-
+| Slime Elixir || [[File:Rarity rare.png]] Rare || Wounded: Gain armor equal to max health and gain 5 acid
+|-
+| Viper Elixir || [[File:Rarity rare.png]] Rare || The first time the enemy gains poison, give them 9 additional poison
+|}
