@@ -317,7 +317,7 @@ export default function SubmitRunPage() {
                 maxLength={1000}
               />
               <p className="text-sm text-gray-400 mt-1">
-                {formData.notes.length}/1000 characters
+                {formData.notes?.length || 0}/1000 characters
               </p>
             </div>
 

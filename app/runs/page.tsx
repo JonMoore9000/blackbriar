@@ -181,7 +181,7 @@ export default function RunsPage() {
                 <span className="text-sm text-gray-400">Active filters:</span>
                 {filters.boss && (
                   <span className="bg-red-900/50 text-red-300 px-2 py-1 rounded text-xs">
-                    Boss: {getBossById(filters.boss)?.name || filters.boss}
+                    Boss: {bosses.find(boss => boss.id === filters.boss)?.name || filters.boss}
                   </span>
                 )}
                 {filters.outcome && (
