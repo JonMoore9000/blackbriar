@@ -50,7 +50,7 @@ export async function saveRun(run: GameRun): Promise<void> {
   await kvClient.set(`run:${run.id}`, JSON.stringify(run));
   
   // Add to runs list
-  const runsList = await kvClient.get('runs:list') || [];
+  const runsList: string[] = (await kvClient.get('runs:list') as string[]) || [];
   runsList.push(run.id);
   await kvClient.set('runs:list', runsList);
 }
@@ -69,7 +69,7 @@ export async function getRuns(
   }
   
   // Get all run IDs
-  const runIds: string[] = await kvClient.get('runs:list') || [];
+  const runIds: string[] = (await kvClient.get('runs:list') as string[]) || [];
   
   // Get all runs
   const runs: GameRun[] = [];
@@ -155,7 +155,7 @@ export async function saveComment(comment: Comment): Promise<void> {
   
   // Add to run's comments list
   const runCommentsKey = `run:${comment.runId}:comments`;
-  const commentsList = await kvClient.get(runCommentsKey) || [];
+  const commentsList: string[] = (await kvClient.get(runCommentsKey) as string[]) || [];
   commentsList.push(comment.id);
   await kvClient.set(runCommentsKey, commentsList);
   
@@ -175,7 +175,7 @@ export async function getCommentsByRunId(runId: string): Promise<Comment[]> {
     return local.getCommentsByRunId(runId);
   }
   
-  const commentIds: string[] = await kvClient.get(`run:${runId}:comments`) || [];
+  const commentIds: string[] = (await kvClient.get(`run:${runId}:comments`) as string[]) || [];
   
   const comments: Comment[] = [];
   for (const commentId of commentIds) {
