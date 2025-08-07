@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Comment, CommentSubmissionForm } from '@/types';
-import { saveComment, getCommentsByRunId, getRunById, generateId } from '@/lib/storage';
+import { saveComment, getCommentsByRunId, getRunById } from '@/lib/kvStorage';
+import { generateId } from '@/lib/storage';
 import { validateComment } from '@/lib/utils';
 
 export async function POST(

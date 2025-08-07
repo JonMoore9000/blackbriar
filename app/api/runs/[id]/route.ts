@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getRunById } from '@/lib/storage';
+import { getRunById } from '@/lib/kvStorage';
 
 export async function GET(
   request: NextRequest,

@@ -28,21 +28,45 @@ export class GameDataParser {
 
   private static parseItemStats(statString: string): { hp?: number; atk?: number; def?: number; spd?: number } {
     const stats: { hp?: number; atk?: number; def?: number; spd?: number } = {};
-    
+
     // Parse format like "[[File:Icon attack.png]] 4<br>[[File:Icon speed.png]] -2"
     const hpMatch = statString.match(/Icon health\.png.*?(\-?\d+)/);
     if (hpMatch) stats.hp = parseInt(hpMatch[1]);
-    
+
     const atkMatch = statString.match(/Icon attack\.png.*?(\-?\d+)/);
     if (atkMatch) stats.atk = parseInt(atkMatch[1]);
-    
+
     const defMatch = statString.match(/Icon armor\.png.*?(\-?\d+)/);
     if (defMatch) stats.def = parseInt(defMatch[1]);
-    
+
     const spdMatch = statString.match(/Icon speed\.png.*?(\-?\d+)/);
     if (spdMatch) stats.spd = parseInt(spdMatch[1]);
-    
+
     return stats;
+  }
+
+  private static cleanDescription(description: string): string {
+    if (!description) return '';
+
+    // If the description looks like it's just stats markup, return empty string
+    const isJustStats = /^\s*(\[\[File:Icon.*?\]\]\s*\-?\d+\s*(<br\s*\/?>)?\s*)*\s*$/.test(description);
+    if (isJustStats) return '';
+
+    // Clean up wiki markup from descriptions
+    const cleaned = description
+      .replace(/\[\[File:[^\]]*?\]\]\s*\-?\d+\s*(<br\s*\/?>)?/gi, '') // Remove stat entries completely
+      .replace(/\[\[File:[^\]]*?\]\]/g, '') // Remove remaining file references
+      .replace(/<br\s*\/?>/gi, ' ') // Replace <br> tags with spaces
+      .replace(/\[\[.*?\|(.*?)\]\]/g, '$1') // Extract text after pipe in links
+      .replace(/\[\[(.*?)\]\]/g, '$1') // Extract text from simple links
+      .replace(/\s+/g, ' ') // Normalize whitespace
+      .replace(/^\s*-\s*$/, '') // Remove standalone dashes
+      .trim();
+
+    // If after cleaning we just have numbers or empty content, return empty
+    if (/^\s*[\d\s\-\+]*\s*$/.test(cleaned)) return '';
+
+    return cleaned;
   }
 
   private static parseRarity(rarityString: string): Item['rarity'] {
@@ -65,13 +89,30 @@ export class GameDataParser {
 
   private static cleanName(name: string): string {
     // Remove wiki markup, file references, and leading pipes
-    return name
-      .replace(/\[\[File:.*?\]\]/g, '')
-      .replace(/\[\[.*?\|(.*?)\]\]/g, '$1')
-      .replace(/\[\[(.*?)\]\]/g, '$1')
+    let cleaned = name
+      .replace(/\[\[File:[^\]]*?\|[^\]]*?\]\]\s*/g, '') // Remove file references with size params like |50px
+      .replace(/\[\[File:[^\]]*?\]\]\s*/g, '') // Remove simple file references
+      .replace(/\[\[He is Coming\/[^\]]*?\|([^\]]*?)\]\]/g, '$1') // Extract text after pipe in "He is Coming" links
+      .replace(/\[\[[^\]]*?\|([^\]]*?)\]\]/g, '$1') // Extract text after pipe in other links
+      .replace(/\[\[([^\]]*?)\]\]/g, '$1') // Extract text from simple links
       .replace(/^\|+\s*/, '') // Remove leading pipes and whitespace
       .replace(/\s*\|+$/, '') // Remove trailing pipes and whitespace
+      .replace(/\s+/g, ' ') // Normalize whitespace
       .trim();
+
+    // Additional cleanup for any remaining markup
+    cleaned = cleaned
+      .replace(/\[\[/g, '') // Remove any remaining opening brackets
+      .replace(/\]\]/g, '') // Remove any remaining closing brackets
+      .replace(/\|.*$/, '') // Remove anything after a pipe (fallback)
+      .trim();
+
+    // Handle cases where the name might still have "He is Coming/" prefix
+    if (cleaned.startsWith('He is Coming/')) {
+      cleaned = cleaned.replace('He is Coming/', '');
+    }
+
+    return cleaned;
   }
 
   private static createId(name: string): string {
@@ -84,27 +125,49 @@ export class GameDataParser {
   }
 
   private static getBossImageUrl(name: string): string {
-    // Map boss names to their sprite files
+    // Map boss names to their sprite files (based on actual game data)
     const nameToSprite: { [key: string]: string } = {
-      'bearserker': 'bear',
+      // Woodland bosses
+      'black knight': 'knight',
+      'bloodmoon werewolf': 'werewolf',
       'brittlebark beast': 'beast',
+      'ironstone golem': 'golem',
+      'razorclaw grizzly': 'bear',
+      'razortusk hog': 'hog',
+      'blackbriar king': 'king',
+      'frostbite druid': 'frostbite',
+      'goldwing monarch': 'monarch',
+      'mountain troll': 'troll',
+      'redwood treant': 'treant',
+      'swiftstrike stag': 'stag',
+      'leshen': 'leshen',
+      'woodland abomination': 'leshen', // Uses same sprite as Leshen
+
+      // Swampland bosses
+      'carnivorous slime': 'slime',
+      'fungal giant': 'fungal',
+      'ironshell snail': 'gastropod',
       'stormcloud druid': 'druid',
+      'swampsong siren': 'siren',
+      'toxic miretoad': 'toad',
+      'clearspring spirit': 'spirit',
+      'granite griffin': 'griffin',
+      'liferoot experiment': 'liferoot_experiment',
+      'silverscale shark': 'shark',
+      'rockshell tortoise': 'tortoise',
+
+      // Hydra heads (special case)
+      'acid head': 'shark', // Fallback sprite
+      'riptide head': 'shark', // Fallback sprite
+      'poison head': 'shark', // Fallback sprite
+      'stun head': 'shark', // Fallback sprite
+
+      // Legacy mappings (in case of old data)
+      'bearserker': 'bear',
       'frostbite': 'frostbite',
       'fungal experiment': 'fungal',
-      'ironshell snail': 'gastropod',
-      'ironstone golem': 'golem',
-      'granite griffin': 'griffin',
-      'razortusk hog': 'hog',
-      'goldwing monarch': 'monarch',
-      'black knight': 'knight',
-      'leshen': 'leshen',
-      'liferoot experiment': 'liferoot_experiment',
-      'bloodmoon werewolf': 'werewolf',
-      'redwood treant': 'treant',
-      'mountain troll': 'troll',
       'gentle giant': 'stag',
-      'hot head': 'slime',
-      'woodland abomination': 'spirit'
+      'hot head': 'slime'
     };
 
     const lowerName = name.toLowerCase();
@@ -114,7 +177,7 @@ export class GameDataParser {
       return `/gamedata/bossArt/Bosssprite_${spriteKey}.png`;
     }
 
-    // Fallback: try to find a direct match
+    // Fallback: try to find a direct match with the boss name
     return `/gamedata/bossArt/${name}.png`;
   }
 
@@ -184,8 +247,8 @@ export class GameDataParser {
           
           const rarity = this.parseRarity(cells[1]);
           const stats = this.parseItemStats(cells[2]);
-          const effect = cells[3]?.trim() || '';
-          
+          const effect = this.cleanDescription(cells[3]?.trim() || '');
+
           const item: Item = {
             id: this.createId(name),
             name: name,
@@ -214,8 +277,8 @@ export class GameDataParser {
           
           const rarity = this.parseRarity(cells[1]);
           const stats = this.parseItemStats(cells[2]);
-          const effect = cells[3]?.trim() || '';
-          
+          const effect = this.cleanDescription(cells[3]?.trim() || '');
+
           const item: Item = {
             id: this.createId(name),
             name: name,
@@ -243,8 +306,8 @@ export class GameDataParser {
           if (!name) continue;
           
           const rarity = this.parseRarity(cells[1]);
-          const effect = cells[2]?.trim() || '';
-          
+          const effect = this.cleanDescription(cells[2]?.trim() || '');
+
           const item: Item = {
             id: this.createId(name),
             name: name,
@@ -271,8 +334,8 @@ export class GameDataParser {
           if (!name) continue;
           
           const rarity = this.parseRarity(cells[1]);
-          const effect = cells[2]?.trim() || '';
-          
+          const effect = this.cleanDescription(cells[2]?.trim() || '');
+
           const item: Item = {
             id: this.createId(name),
             name: name,
@@ -294,7 +357,7 @@ export class GameDataParser {
   }
 
   static async loadAllGameData(): Promise<{ bosses: Boss[]; items: Item[] }> {
-    const gameDataDir = path.join(process.cwd(), 'gamedata');
+    const gameDataDir = path.join(process.cwd(), 'public', 'gamedata');
     
     const [
       woodlandBosses,

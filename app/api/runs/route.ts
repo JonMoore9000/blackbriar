@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { GameRun, RunSubmissionForm, RunFilters, RunSortOption } from '@/types';
-import { saveRun, getRuns, generateId } from '@/lib/storage';
+import { saveRun, getRuns } from '@/lib/kvStorage';
+import { generateId } from '@/lib/storage';
 import { validateRunSubmission } from '@/lib/utils';
 import { getBossById } from '@/lib/serverGameData';
 import { generateRoast } from '@/lib/ai-roast';
@@ -50,12 +51,17 @@ export async function POST(request: NextRequest) {
 
     // Try to generate AI roast (don't fail if this fails)
     try {
-      const roast = await generateRoast(run);
-      run.aiRoast = roast;
+      // Only try to generate roast if we have the necessary environment variables
+      if (process.env.OPENAI_API_KEY || process.env.ANTHROPIC_API_KEY) {
+        const roast = await generateRoast(run);
+        run.aiRoast = roast;
 
-      // Update the run with the roast
-      const { updateRunRoast } = await import('@/lib/storage');
-      await updateRunRoast(run.id, roast);
+        // Update the run with the roast
+        const { updateRunRoast } = await import('@/lib/kvStorage');
+        await updateRunRoast(run.id, roast);
+      } else {
+        console.log('No AI API keys configured, skipping roast generation');
+      }
     } catch (error) {
       console.log('Failed to generate AI roast, continuing without it:', error);
       // Continue without roast - not a critical failure

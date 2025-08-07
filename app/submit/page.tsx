@@ -14,6 +14,7 @@ export default function SubmitRunPage() {
   const [bosses, setBosses] = useState<Boss[]>([]);
   const [items, setItems] = useState<Item[]>([]);
   const [loading, setLoading] = useState(true);
+  const [itemSearchTerm, setItemSearchTerm] = useState('');
 
   const [formData, setFormData] = useState<RunSubmissionForm>({
     boss: '',
@@ -67,13 +68,16 @@ export default function SubmitRunPage() {
       });
       
       if (!response.ok) {
-        throw new Error('Failed to submit run');
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || `Server error: ${response.status}`);
       }
-      
+
       const result = await response.json();
       router.push(`/runs/${result.id}`);
-    } catch {
-      setErrors(['Failed to submit run. Please try again.']);
+    } catch (error) {
+      console.error('Submit error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Failed to submit run. Please try again.';
+      setErrors([errorMessage]);
     } finally {
       setIsSubmitting(false);
     }
@@ -88,6 +92,14 @@ export default function SubmitRunPage() {
     }));
   };
 
+  // Filter items based on search term
+  const filteredItems = items.filter(item =>
+    item.name.toLowerCase().includes(itemSearchTerm.toLowerCase()) ||
+    item.area?.toLowerCase().includes(itemSearchTerm.toLowerCase()) ||
+    item.type?.toLowerCase().includes(itemSearchTerm.toLowerCase()) ||
+    item.rarity?.toLowerCase().includes(itemSearchTerm.toLowerCase())
+  );
+
   return (
     <div className="submit-page min-h-screen">
       <div className="submit-container container mx-auto px-4 py-8">
@@ -95,7 +107,7 @@ export default function SubmitRunPage() {
           <div className="submit-header mb-8">
             <Link
               href="/"
-              className="submit-back-link text-red-400 hover:text-red-300 transition-colors"
+              className="submit-back-link font-body text-red-400 hover:text-red-300 transition-colors"
             >
               ← Back to Home
             </Link>
@@ -164,39 +176,77 @@ export default function SubmitRunPage() {
                   <p className="text-gray-400">Loading items...</p>
                 </div>
               ) : (
-                <div className="grid grid-cols-2 gap-2 max-h-48 overflow-y-auto bg-gray-800 border border-gray-600 rounded-lg p-3">
-                  {items.map(item => (
-                    <label key={item.id} className="flex items-center space-x-2 cursor-pointer hover:bg-gray-700 p-2 rounded">
-                      <input
-                        type="checkbox"
-                        checked={formData.items.includes(item.id)}
-                        onChange={() => handleItemToggle(item.id)}
-                        className="text-red-500 focus:ring-red-500"
-                      />
-                      <div className="flex-1">
-                        <span className="text-sm text-gray-300">{item.name}</span>
-                        {item.area && (
-                          <span className="text-xs text-gray-500 ml-1">({item.area})</span>
-                        )}
-                        {item.rarity && (
-                          <span className={`text-xs ml-1 ${
-                            item.rarity === 'common' ? 'text-gray-400' :
-                            item.rarity === 'uncommon' ? 'text-green-400' :
-                            item.rarity === 'rare' ? 'text-blue-400' :
-                            item.rarity === 'heroic' ? 'text-orange-400' :
-                            'text-purple-400'
-                          }`}>
-                            ★
-                          </span>
-                        )}
+                <>
+                  {/* Search Input */}
+                  <div className="mb-3 relative">
+                    <input
+                      type="text"
+                      placeholder="Search items by name, area, type, or rarity..."
+                      value={itemSearchTerm}
+                      onChange={(e) => setItemSearchTerm(e.target.value)}
+                      className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 pr-10 text-white placeholder-gray-400 focus:border-red-500 focus:outline-none text-sm"
+                    />
+                    {itemSearchTerm && (
+                      <button
+                        type="button"
+                        onClick={() => setItemSearchTerm('')}
+                        className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                        title="Clear search"
+                      >
+                        ✕
+                      </button>
+                    )}
+                  </div>
+
+                  {/* Items Grid */}
+                  <div className="grid grid-cols-2 gap-2 max-h-48 overflow-y-auto bg-gray-800 border border-gray-600 rounded-lg p-3">
+                    {filteredItems.length > 0 ? (
+                      filteredItems.map(item => (
+                        <label key={item.id} className="flex items-center space-x-2 cursor-pointer hover:bg-gray-700 p-2 rounded">
+                          <input
+                            type="checkbox"
+                            checked={formData.items.includes(item.id)}
+                            onChange={() => handleItemToggle(item.id)}
+                            className="text-red-500 focus:ring-red-500"
+                          />
+                          <div className="flex-1">
+                            <span className="text-sm text-gray-300">{item.name}</span>
+                            {item.area && (
+                              <span className="text-xs text-gray-500 ml-1">({item.area})</span>
+                            )}
+                            {item.rarity && (
+                              <span className={`text-xs ml-1 ${
+                                item.rarity === 'common' ? 'text-gray-400' :
+                                item.rarity === 'uncommon' ? 'text-green-400' :
+                                item.rarity === 'rare' ? 'text-blue-400' :
+                                item.rarity === 'heroic' ? 'text-orange-400' :
+                                'text-purple-400'
+                              }`}>
+                                ★
+                              </span>
+                            )}
+                          </div>
+                        </label>
+                      ))
+                    ) : (
+                      <div className="col-span-2 text-center py-4">
+                        <p className="text-gray-400 text-sm">
+                          {itemSearchTerm ? 'No items found matching your search.' : 'No items available.'}
+                        </p>
                       </div>
-                    </label>
-                  ))}
-                </div>
+                    )}
+                  </div>
+
+                  <p className="text-sm text-gray-400 mt-2">
+                    Selected: {formData.items.length} items
+                    {itemSearchTerm && (
+                      <span className="ml-2">
+                        • Showing {filteredItems.length} of {items.length} items
+                      </span>
+                    )}
+                  </p>
+                </>
               )}
-              <p className="text-sm text-gray-400 mt-1">
-                Selected: {formData.items.length} items
-              </p>
             </div>
 
             {/* Stats */}
@@ -204,7 +254,7 @@ export default function SubmitRunPage() {
               <label className="block text-gray-300 font-semibold mb-2">
                 Player Stats *
               </label>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-4 gap-4">
                 <div>
                   <label className="block text-sm text-gray-400 mb-1">HP</label>
                   <input

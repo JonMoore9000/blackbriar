@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background-image: url('../gamedata/background.jpg');
+  background-image: url('../public/gamedata/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -80,7 +80,7 @@ body {
 
 /* Header font classes */
 .font-header {
-   font-family: 'Amarante';
+   font-family: 'Amarante', 'Amarante-Backup', 'Times New Roman', serif !important;
   font-weight: 400;
   font-style: normal;
 }

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { GameRun, Boss } from '@/types';
 import { getBossById } from '@/data/gameData';
 import { formatRelativeTime, calculateTotalStats, truncateText } from '@/lib/utils';
+import BossImage from '@/components/BossImage';
 
 interface RunCardProps {
   run: GameRun;
@@ -29,8 +30,12 @@ export default function RunCard({ run }: RunCardProps) {
       <div className="run-card bg-black/95 backdrop-blur-md rounded-lg p-4 border border-red-900/50 hover:border-red-500/50 transition-all duration-200 hover:bg-black/99 cursor-pointer h-full">
         {/* Header */}
         <div className="run-card-header flex items-center justify-between mb-3">
-          <div className="run-card-boss-info flex items-center space-x-2">
-            <span className="run-card-boss-icon text-lg">👹</span>
+          <div className="run-card-boss-info flex items-center space-x-3">
+            <BossImage
+              imageUrl={boss?.imageUrl}
+              name={boss?.name || run.boss}
+              className="w-8 h-8"
+            />
             <span className="run-card-boss-name font-semibold text-white text-sm">
               {boss?.name || run.boss}
             </span>

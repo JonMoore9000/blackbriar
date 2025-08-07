@@ -39,20 +39,48 @@ export default function ItemList({ items }: ItemListProps) {
             rarityColors[item.rarity || 'common']
           }`}
         >
-          <div className="flex items-center space-x-2 mb-1">
+          <div className="flex items-center space-x-2 mb-2">
             <span className="text-lg">
               {typeIcons[item.type || 'weapon']}
             </span>
             <span className="font-semibold text-sm">{item.name}</span>
           </div>
-          
-          {item.description && (
-            <p className="text-xs text-gray-400 leading-tight">
+
+          {/* Stats Display */}
+          {item.stats && Object.keys(item.stats).length > 0 && (
+            <div className="flex flex-wrap gap-1 mb-2">
+              {item.stats.hp && (
+                <span className="text-xs px-1.5 py-0.5 bg-red-900/50 text-red-300 rounded">
+                  {item.stats.hp > 0 ? '+' : ''}{item.stats.hp} HP
+                </span>
+              )}
+              {item.stats.atk && (
+                <span className="text-xs px-1.5 py-0.5 bg-orange-900/50 text-orange-300 rounded">
+                  {item.stats.atk > 0 ? '+' : ''}{item.stats.atk} ATK
+                </span>
+              )}
+              {item.stats.def && (
+                <span className="text-xs px-1.5 py-0.5 bg-blue-900/50 text-blue-300 rounded">
+                  {item.stats.def > 0 ? '+' : ''}{item.stats.def} DEF
+                </span>
+              )}
+              {item.stats.spd && (
+                <span className="text-xs px-1.5 py-0.5 bg-green-900/50 text-green-300 rounded">
+                  {item.stats.spd > 0 ? '+' : ''}{item.stats.spd} SPD
+                </span>
+              )}
+            </div>
+          )}
+
+          {/* Description */}
+          {item.description && item.description !== '' && (
+            <p className="text-xs text-gray-400 leading-tight mb-2">
               {item.description}
             </p>
           )}
-          
-          <div className="flex items-center justify-between mt-2">
+
+          {/* Type and Rarity */}
+          <div className="flex items-center justify-between">
             {item.type && (
               <span className="text-xs px-2 py-1 bg-gray-700 rounded text-gray-300">
                 {item.type}
