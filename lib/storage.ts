@@ -50,7 +50,7 @@ export async function getRuns(
   sortBy: RunSortOption = 'newest',
   page: number = 1,
   limit: number = 20
-): Promise<{ runs: GameRun[]; total: number }> {
+): Promise<{ runs: GameRun[]; total: number; page: number; limit: number }> {
   await initializeDataFiles();
   
   const runsData = await fs.readFile(RUNS_FILE, 'utf-8');
@@ -95,7 +95,7 @@ export async function getRuns(
   const startIndex = (page - 1) * limit;
   const paginatedRuns = runs.slice(startIndex, startIndex + limit);
   
-  return { runs: paginatedRuns, total };
+  return { runs: paginatedRuns, total, page, limit };
 }
 
 export async function getRunById(id: string): Promise<GameRun | null> {
