@@ -76,7 +76,7 @@ export async function getRuns(
   for (const runId of runIds) {
     const runData = await kvClient.get(`run:${runId}`);
     if (runData) {
-      runs.push(typeof runData === 'string' ? JSON.parse(runData) : runData);
+      runs.push(typeof runData === 'string' ? JSON.parse(runData) as GameRun : runData as GameRun);
     }
   }
   
@@ -123,8 +123,8 @@ export async function getRunById(id: string): Promise<GameRun | null> {
   
   const runData = await kvClient.get(`run:${id}`);
   if (!runData) return null;
-  
-  return typeof runData === 'string' ? JSON.parse(runData) : runData;
+
+  return typeof runData === 'string' ? JSON.parse(runData) as GameRun : runData as GameRun;
 }
 
 export async function updateRunRoast(runId: string, roast: string): Promise<void> {
@@ -181,7 +181,7 @@ export async function getCommentsByRunId(runId: string): Promise<Comment[]> {
   for (const commentId of commentIds) {
     const commentData = await kvClient.get(`comment:${commentId}`);
     if (commentData) {
-      comments.push(typeof commentData === 'string' ? JSON.parse(commentData) : commentData);
+      comments.push(typeof commentData === 'string' ? JSON.parse(commentData) as Comment : commentData as Comment);
     }
   }
   
