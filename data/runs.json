@@ -62,5 +62,52 @@
     "commentCount": 0,
     "shareCount": 0,
     "aiRoast": "ForestGuardian with the patience of a saint and the speed of a glacier! Your strategy was solid, even if watching it was like watching paint dry. 🌲🛡️"
+  },
+  {
+    "id": "me4nseba5bykaoygzuv",
+    "createdAt": "2025-08-09T19:39:43.606Z",
+    "playerName": "JonDevTest",
+    "boss": "blackbriar-king",
+    "items": [
+      "blackbriar-blade",
+      "icicle-spear",
+      "lifeblood-spear",
+      "bejeweled-blade",
+      "ironstone-bow",
+      "explosive-sword"
+    ],
+    "hp": 15,
+    "atk": 4,
+    "def": 5,
+    "spd": 4,
+    "outcome": "defeat",
+    "deathReason": "those dang thorns get me every time",
+    "notes": "decent run. not a great build",
+    "commentCount": 0,
+    "shareCount": 0,
+    "aiRoast": "JonDevTest, your build is as confused as a cat in a cucumber patch. Those thorns saw you coming from a mile away. #RIP"
+  },
+  {
+    "id": "me4o17ggygsfy71c7cs",
+    "createdAt": "2025-08-09T19:46:34.624Z",
+    "playerName": "JonDevTest",
+    "boss": "ironstone-golem",
+    "items": [
+      "hidden-dagger",
+      "brittlebark-bow",
+      "featherweight-blade",
+      "elderwood-staff",
+      "blackbriar-blade",
+      "bejeweled-blade"
+    ],
+    "hp": 10,
+    "atk": 5,
+    "def": 3,
+    "spd": 2,
+    "outcome": "defeat",
+    "deathReason": "test",
+    "notes": "test",
+    "commentCount": 0,
+    "shareCount": 0
   }
 ]

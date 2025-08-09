@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Comment, CommentSubmissionForm } from '@/types';
-import { saveComment, getCommentsByRunId, getRunById } from '@/lib/kvStorage';
+import { saveComment, getCommentsByRunId, getRunById } from '@/lib/firebaseStorage';
 import { generateId } from '@/lib/storage';
 import { validateComment } from '@/lib/utils';
 

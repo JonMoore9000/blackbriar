@@ -104,7 +104,7 @@ Roast:`;
 
 // Function to generate and save roast for an existing run
 export async function generateAndSaveRoast(runId: string, forceRegenerate: boolean = false): Promise<string> {
-  const { getRunById } = await import('./kvStorage');
+  const { getRunById } = await import('./firebaseStorage');
   const run = await getRunById(runId);
 
   if (!run) {
@@ -119,7 +119,7 @@ export async function generateAndSaveRoast(runId: string, forceRegenerate: boole
   const roast = await generateRoast(run);
 
   // Update the run with the roast
-  const { updateRunRoast } = await import('./kvStorage');
+  const { updateRunRoast } = await import('./firebaseStorage');
   await updateRunRoast(runId, roast);
 
   return roast;

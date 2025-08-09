@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getRunById, getCommentsByRunId } from '@/lib/kvStorage';
+import { getRunById, getCommentsByRunId } from '@/lib/firebaseStorage';
 import { getBossById, getItemById } from '@/lib/serverGameData';
 import { formatRelativeTime, calculateTotalStats } from '@/lib/utils';
 import RunStats from '@/components/RunStats';

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { GameRun, RunSubmissionForm, RunFilters, RunSortOption } from '@/types';
-import { saveRun, getRuns } from '@/lib/kvStorage';
+import { saveRun, getRuns } from '@/lib/firebaseStorage';
 import { generateId } from '@/lib/storage';
 import { validateRunSubmission } from '@/lib/utils';
 import { getBossById } from '@/lib/serverGameData';
@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
         run.aiRoast = roast;
 
         // Update the run with the roast
-        const { updateRunRoast } = await import('@/lib/kvStorage');
+        const { updateRunRoast } = await import('@/lib/firebaseStorage');
         await updateRunRoast(run.id, roast);
       } else {
         console.log('No AI API keys configured, skipping roast generation');
