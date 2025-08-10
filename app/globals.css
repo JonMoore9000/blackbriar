@@ -29,35 +29,35 @@
 
 /* Custom font utilities */
 .font-header {
-  font-family: 'Amarante', 'Amarante-Backup', 'Times New Roman', serif !important;
-  font-weight: 400 !important;
-  font-style: normal !important;
+  font-family: 'Amarante', 'Amarante-Backup', 'Times New Roman', serif ;
+  font-weight: 400 ;
+  font-style: normal ;
 }
 
 .font-body {
-  font-family: 'Jersey 10', 'Courier New', monospace !important;
-  font-weight: 400 !important;
+  font-family: 'Jersey 10', 'Courier New', monospace ;
+  font-weight: 400 ;
 }
 
 /* Test to make sure fonts are loading */
 h1.font-header {
-  font-family: 'Amarante', 'Amarante-Backup', 'Times New Roman', serif !important;
-  font-weight: 400 !important;
+  font-family: 'Amarante', 'Amarante-Backup', 'Times New Roman', serif ;
+  font-weight: 400 ;
 }
 
 p.font-body {
-  font-family: 'Jersey 10', 'Courier New', monospace !important;
+  font-family: 'Jersey 10', 'Courier New', monospace;
 }
 
 /* Specific targeting for main title */
 .home-title.font-header {
-  font-family: 'Amarante', 'Amarante-Backup', 'Times New Roman', serif !important;
-  font-weight: 400 !important;
+  font-family: 'Amarante', 'Amarante-Backup', 'Times New Roman', serif;
+  font-weight: 400 ;
 }
 
 /* Force Amarante on all headers */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Amarante', 'Amarante-Backup', 'Times New Roman', serif !important;
+  font-family: 'Amarante', 'Amarante-Backup', 'Times New Roman', serif;
 }
 
 /* Tailwind theme configuration moved to tailwind.config.js */
@@ -80,14 +80,14 @@ body {
 
 /* Header font classes */
 .font-header {
-   font-family: 'Amarante', 'Amarante-Backup', 'Times New Roman', serif !important;
+   font-family: 'Amarante', 'Amarante-Backup', 'Times New Roman', serif ;
   font-weight: 400;
   font-style: normal;
 }
 
 /* Body font classes */
 .font-body {
-  font-family: 'Jersey 10', 'Courier New', monospace !important;
+  font-family: 'Jersey 10', 'Courier New', monospace;
   letter-spacing: 1px;
   font-weight: 400;
   font-size: 20px;
@@ -96,7 +96,7 @@ body {
 
 /* Apply header font to all headings by default */
 h1, h2, h3, h4, h5, h6 {
-   font-family: 'Amarante';
+   font-family: 'Amarante', 'Amarante-Backup', 'Times New Roman', serif;
 }
 
 @media (min-width: 768px) {
@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   letter-spacing: 1px;
   font-weight: 400;
-  font-family: 'Jersey 10', 'Courier New', monospace !important;
+  font-family: 'Jersey 10', 'Courier New', monospace;
 }
 
 .home-actions a {
@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 22px;
   line-height: 1.2;
   border-radius: 0;
-  font-family: 'Jersey 10', 'Courier New', monospace !important;
+  font-family: 'Jersey 10', 'Courier New', monospace;
 }
 
 .home-feature-card {
@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .runs-filters label, .runs-filters select, .runs-filters button, .ai-roast-regenerate-text, .ai-roast-text, button, p, span, label, textarea, input  {
-  font-family: 'Jersey 10', 'Courier New', monospace !important;
+  font-family: 'Jersey 10', 'Courier New', monospace ;
   font-size: 18px;
   line-height: 1.2;
   letter-spacing: 1px;
@@ -169,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
 .run-card-stats > div {
   background: rgba(255, 255, 255, 0.025);
   padding: 5px 0;
-  font-family: 'Jersey 10', 'Courier New', monospace !important;
+  font-family: 'Jersey 10', 'Courier New', monospace ;
 }
 
 .run-card-stat-label {

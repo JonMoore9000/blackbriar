@@ -16,9 +16,12 @@ export async function saveRun(run: GameRun): Promise<void> {
   try {
     const db = getDb();
     await setDoc(doc(db, RUNS, run.id), run);
-  } catch {
-    const l = await local();
-    return l.saveRun(run);
+  } catch (err) {
+    if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+      const l = await local();
+      return l.saveRun(run);
+    }
+    throw err;
   }
 }
 
@@ -27,9 +30,12 @@ export async function getRunById(id: string): Promise<GameRun | null> {
     const db = getDb();
     const snap = await getDoc(doc(db, RUNS, id));
     return snap.exists() ? (snap.data() as GameRun) : null;
-  } catch {
-    const l = await local();
-    return l.getRunById(id);
+  } catch (err) {
+    if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+      const l = await local();
+      return l.getRunById(id);
+    }
+    throw err;
   }
 }
 
@@ -41,9 +47,12 @@ export async function updateRunRoast(runId: string, roast: string): Promise<void
     const run = snap.data() as GameRun;
     run.aiRoast = roast;
     await setDoc(doc(db, RUNS, runId), run);
-  } catch {
-    const l = await local();
-    return l.updateRunRoast(runId, roast);
+  } catch (err) {
+    if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+      const l = await local();
+      return l.updateRunRoast(runId, roast);
+    }
+    throw err;
   }
 }
 
@@ -86,9 +95,12 @@ export async function getRuns(
     const runs = all.slice(startIndex, startIndex + limit);
 
     return { runs, total, page, limit };
-  } catch {
-    const l = await local();
-    return l.getRuns(filters, sortBy, page, limit);
+  } catch (err) {
+    if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+      const l = await local();
+      return l.getRuns(filters, sortBy, page, limit);
+    }
+    throw err;
   }
 }
 
@@ -104,9 +116,12 @@ export async function saveComment(comment: Comment): Promise<void> {
       run.commentCount = (run.commentCount || 0) + 1;
       await setDoc(doc(db, RUNS, comment.runId), run);
     }
-  } catch {
-    const l = await local();
-    return l.saveComment(comment);
+  } catch (err) {
+    if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+      const l = await local();
+      return l.saveComment(comment);
+    }
+    throw err;
   }
 }
 
@@ -116,9 +131,12 @@ export async function getCommentsByRunId(runId: string): Promise<Comment[]> {
     const q = query(collection(db, COMMENTS), where('runId', '==', runId), orderBy('createdAt', 'asc'));
     const snaps = await getDocs(q);
     return snaps.docs.map(d => d.data() as Comment);
-  } catch {
-    const l = await local();
-    return l.getCommentsByRunId(runId);
+  } catch (err) {
+    if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+      const l = await local();
+      return l.getCommentsByRunId(runId);
+    }
+    throw err;
   }
 }
 
