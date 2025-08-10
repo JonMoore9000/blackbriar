@@ -15,7 +15,9 @@ const COMMENTS = 'comments';
 export async function saveRun(run: GameRun): Promise<void> {
   try {
     const db = getDb();
-    await setDoc(doc(db, RUNS, run.id), run);
+    // Firestore does not allow undefined fields; strip them before writing
+    const data = JSON.parse(JSON.stringify(run)) as GameRun;
+    await setDoc(doc(db, RUNS, run.id), data);
   } catch (err) {
     if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
       const l = await local();
@@ -46,7 +48,8 @@ export async function updateRunRoast(runId: string, roast: string): Promise<void
     if (!snap.exists()) return;
     const run = snap.data() as GameRun;
     run.aiRoast = roast;
-    await setDoc(doc(db, RUNS, runId), run);
+    const data = JSON.parse(JSON.stringify(run)) as GameRun;
+    await setDoc(doc(db, RUNS, runId), data);
   } catch (err) {
     if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
       const l = await local();
@@ -107,14 +110,16 @@ export async function getRuns(
 export async function saveComment(comment: Comment): Promise<void> {
   try {
     const db = getDb();
-    await setDoc(doc(db, COMMENTS, comment.id), comment);
+    const data = JSON.parse(JSON.stringify(comment)) as Comment;
+    await setDoc(doc(db, COMMENTS, comment.id), data);
 
     // Increment comment count on the run document
     const runSnap = await getDoc(doc(db, RUNS, comment.runId));
     if (runSnap.exists()) {
       const run = runSnap.data() as GameRun;
       run.commentCount = (run.commentCount || 0) + 1;
-      await setDoc(doc(db, RUNS, comment.runId), run);
+      const runData = JSON.parse(JSON.stringify(run)) as GameRun;
+      await setDoc(doc(db, RUNS, comment.runId), runData);
     }
   } catch (err) {
     if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
